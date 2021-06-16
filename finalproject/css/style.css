@@ -1,0 +1,19 @@
+.jumbotron{
+  background: url("https://cdn.shopify.com/s/files/1/0533/2089/files/freelancer-tools.jpg?v=1516733249");
+  background-size: cover;
+}
+
+.container.wrapper {
+    background: #d3d3d3e8;
+    padding-bottom: 8px;
+    color: black;
+}
+i {
+    font-size: 50px;
+}
+.form-inline .form-control{
+  width: 25pc;
+}
+.bg-dark {
+    background-color: #3ba73f!important;
+  }
