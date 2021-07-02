@@ -1,99 +1,130 @@
-<!doctype html>
-<html lang="en-us">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title></title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <!-- fixed-top | sticky-top | fixed-bottom -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container ">
-            <a class="navbar-brand " href="#">Freelance</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<?php
+  include 'includes/header.php';
+ ?>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav float-right">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Sign in <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Join</a>
-                    </li>
-                </ul>
+    <div class="view">
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-gradient align-items-center">
+        <!-- Content -->
+        <div class="container">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+              <h1 class="h1-responsive font-weight-bold mt-sm-5">Shopping never be that easy</h1>
+              <hr class="hr-light">
+              <h6 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+              dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+              iste.</h6>
+              <button type="button" name="button" class="btn btn-outline-primary"><a class="btn btn-white">Join us</a></button>
             </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+              <img src="images/bg.png" alt="" class="img-fluid">
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
         </div>
-    </nav>
-  </header>
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container wrapper ">
-      <h1 class="display-3">Find your way</h1>
-      <p class="lead">Let take a look about our service</p>
-      <form class="form-inline my-2 my-lg-0 mb-3">
-          <input class="form-control mr-sm-3" type="search" placeholder="Search the  recruitment" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
     </div>
-  </div>
-  <div class="container ">
+    <!-- Full Page Intro -->
+
+  <div class="container mt-3">
     <div class="row">
-      <div class="col-md-4">
-        <h3>24/7 Support</h3><br>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="col-md-6 text-center">
+        <img src="images/m.watches.jpg" alt="" width="100%">
+        <p class="lead">Watches for him</p>
+        <a href="#">Shop the collection</a>
       </div>
-      <div class="col-md-4">
-        <h3>Best for every members</h3><br>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      </div>
-      <div class="col-md-4">
-        <h3>Safe</h3><br>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="col-md-6 text-center">
+        <img src="images/w.watches.jpg" alt="" width="100%">
+        <p class="lead">Watches for her</p>
+        <a href="#">Shop the collection</a>
       </div>
     </div>
   </div>
-  <h2 class="mt-3 mb-4 ml-3">Explore our service</h2>
-  <div class="container">
-    <div class="row text-center">
+
+  <div class="container products">
+
+  </div>
+
+  <h2>Our collaborate brands </h2>
+  <div class="container mb-3">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="images/pnj.png" alt="">
+            </div>
+            <div class="col-md-4">
+              <img src="images/cartier.png" alt="">
+            </div>
+            <div class="col-md-4">
+              <img src="images/harrywinston.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="images/chopard.png" alt="">
+            </div>
+            <div class="col-md-4">
+              <img src="images/bvlgari.jpg" alt="">
+            </div>
+            <div class="col-md-4">
+              <img src="images/swarovski.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="images/tiffany&co.png" alt="">
+            </div>
+            <div class="col-md-4">
+              <img src="images/vancleefarpels.png" alt="">
+            </div>
+            <div class="col-md-4">
+              <img src="images/pandora.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <h2>OUR EXCLUSIVE E-BOUTIQUE SERVICES</h2>
+  <div class="container mb-3">
+    <div class="row">
       <div class="col-md-3">
-        <i class="fas fa-paint-brush"></i>
-        <hr>
-        <h5>Graphic design</h5>
+        <p class="lead "> <i class="fas fa-truck-loading "></i> Delivery</p>
       </div>
       <div class="col-md-3">
-        <i class="fas fa-desktop"></i>
-        <hr>
-        <h5>Web design</h5>
+        <p class="lead"><i class="fas fa-box-open "></i> Free return & Exchanges</p>
       </div>
       <div class="col-md-3">
-        <i class="fas fa-photo-video"></i>
-        <hr>
-        <h5>Video Making</h5>
+        <p class="lead"><i class="fas fa-map-marker-alt "></i> Buy online & Pick up in store</p>
       </div>
       <div class="col-md-3">
-        <i class="fas fa-hand-holding-usd"></i>
-        <hr>
-        <h5>Business</h5>
+        <p class="lead"><i class="fas fa-gifts"></i> Free gift wrapping</p>
       </div>
     </div>
   </div>
-  <footer class="bg-dark text-center text-white mt-5">Copyright:</footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-</body>
-</html>
+
+<?php
+  include 'includes/footer.php';
+ ?>

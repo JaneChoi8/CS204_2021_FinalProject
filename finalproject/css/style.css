@@ -1,19 +1,40 @@
-.jumbotron{
-  background: url("https://cdn.shopify.com/s/files/1/0533/2089/files/freelancer-tools.jpg?v=1516733249");
-  background-size: cover;
+h2 {
+  text-align: center;
 }
 
-.container.wrapper {
-    background: #d3d3d3e8;
-    padding-bottom: 8px;
+.jumbotron{
+  background: images/h.jpg;
+}
+
+i{
+  color: lightgrey;
+}
+
+.pre-footer.row {
+    background: #6e1423;
+    color: white;
+}
+
+.pre-footer a{
+  color: white;
+}
+
+.view{
+background: #f7f7f7;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+
+}
+p{
+  margin-bottom: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 25vh;
+}
+
+.col-md-6.text-center a {
     color: black;
 }
-i {
-    font-size: 50px;
-}
-.form-inline .form-control{
-  width: 25pc;
-}
-.bg-dark {
-    background-color: #3ba73f!important;
-  }
