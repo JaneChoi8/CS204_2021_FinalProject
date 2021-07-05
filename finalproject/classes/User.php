@@ -45,13 +45,13 @@ class User {
     header("Location: index.php?login=true");
   }
 
-  public function checkNewUser($user_name, $password, $email, $gender) {
+  public function checkNewUser($user_name, $password, $email) {
     $this->user_name = $user_name;
     $this->getUsername();
     if (!empty($this->user)) {
       $this->errors['create_username'] = "This username has already existed!";
     } else{
-      $this->createAccount($user_name, $password, $email, $gender);
+      $this->createAccount($user_name, $password, $email);
     }
   }
 

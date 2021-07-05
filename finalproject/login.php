@@ -1,5 +1,14 @@
-<?php include 'includes/header.php'; ?>
-
+<?php
+  include 'includes/header.php';
+  include 'classes/User.php';
+  if(isset($_POST['login'])) {
+    $user_name = $_POST['username'];
+    $user_password = $_POST['password'];
+    $user = new User($conn);
+    $user->checkLogin($user_name, $user_password);
+    $errors = $user->errors;
+  }
+?>
 <div class="container mt-5">
    <?php if (isset($errors) && !empty($errors)): ?>
      <div class="alert alert-danger" role="alert">
@@ -8,7 +17,7 @@
        <?php endforeach; ?>
      </div>
    <?php endif; ?>
-   <div class="col-md-4 offset-md-2">
+   <div class="col-md-4 offset-md-4 mb-4">
        <h3><i class="fa fa-user"></i> Login</h3>
        <form class="" action="login.php" method="post">
          <label for="username">Username</label>
