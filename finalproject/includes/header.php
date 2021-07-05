@@ -36,15 +36,21 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav float-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.php">Sign-up</a>
-                    </li>
-                    <li class="nav_item">
-                      <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i></a>
-                    </li>
+                <?php if (!$_SESSION['loggedin']): ?>
+                  <li class="nav-item">
+                      <a class="nav-link" href="login.php">Log in</a>
+                  </li>
+                <?php else: ?>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.php"><?php echo $_SESSION['user_name']; ?></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="logout.php">Log out</a>
+                  </li>
+                <?php endif; ?>
+                <li class="nav_item">
+                  <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i></a>
+                </li>
                 </ul>
             </div>
         </div>
