@@ -1,6 +1,4 @@
 <?php
-  session_start();
-  $_SESSION = [];
-  session_destroy();
-  header("Location: index.php?logout");
+  include 'classes/User.php';
+  User::logout();
  ?>
