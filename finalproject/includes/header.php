@@ -49,7 +49,7 @@
                     </li>
                   <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php"><?php echo $_SESSION['user_name']; ?></a>
+                        <a class="nav-link" href="user.php"><?php echo $_SESSION['user_name']; ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Log out</a>
