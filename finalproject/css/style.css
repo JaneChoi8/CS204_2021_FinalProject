@@ -10,15 +10,6 @@ i{
   color: lightgrey;
 }
 
-.pre-footer.row {
-    background: #6e1423;
-    color: white;
-}
-
-.pre-footer a{
-  color: white;
-}
-
 .view{
 background: #f7f7f7;
 background-repeat: no-repeat;
@@ -26,6 +17,7 @@ background-size: cover;
 background-position: center center;
 
 }
+
 p{
   margin-bottom: 0;
 }
@@ -37,4 +29,23 @@ p{
 
 .col-md-6.text-center a {
     color: black;
+}
+
+.mt-5{
+  margin-top: 4rem!important;
+}
+
+.bg-light {
+    background-color: #81d8d0!important;
+}
+
+i nav {
+    color: black;
+}
+
+a .pre-footer {
+  color: black;
+}
+.fa-cart-plus:before{
+  color: #00000080;
 }

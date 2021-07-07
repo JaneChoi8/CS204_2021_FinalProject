@@ -6,7 +6,7 @@
       <!-- Mask & flexbox options-->
       <div class="mask rgba-gradient align-items-center">
         <!-- Content -->
-        <div class="container">
+        <div class="container mt-5">
           <!--Grid row-->
           <div class="row">
             <!--Grid column-->
@@ -59,39 +59,39 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md-4">
-              <img src="images/pnj.png" alt="">
+              <a href="#"><img src="images/pnj.png" alt=""></a>
             </div>
             <div class="col-md-4">
-              <img src="images/cartier.png" alt="">
+              <a href="#"><img src="images/cartier.png" alt=""></a>
             </div>
             <div class="col-md-4">
-              <img src="images/harrywinston.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="images/chopard.png" alt="">
-            </div>
-            <div class="col-md-4">
-              <img src="images/bvlgari.jpg" alt="">
-            </div>
-            <div class="col-md-4">
-              <img src="images/swarovski.png" alt="">
+              <a href="#"><img src="images/harrywinston.jpg" alt=""></a>
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row">
             <div class="col-md-4">
-              <img src="images/tiffany&co.png" alt="">
+              <a href="#"><img src="images/chopard.png" alt=""></a>
             </div>
             <div class="col-md-4">
-              <img src="images/vancleefarpels.png" alt="">
+              <a href="#"><img src="images/bvlgari.jpg" alt=""></a>
             </div>
             <div class="col-md-4">
-              <img src="images/pandora.jpg" alt="">
+              <a href="#"><img src="images/swarovski.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="#"><img src="images/tiffany&co.png" alt=""></a>
+            </div>
+            <div class="col-md-4">
+              <a href="#"><img src="images/vancleefarpels.png" alt=""></a>
+            </div>
+            <div class="col-md-4">
+              <a href="#"><img src="images/pandora.jpg" alt=""></a>
             </div>
           </div>
         </div>

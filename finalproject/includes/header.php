@@ -19,9 +19,9 @@
 <body>
   <header>
     <!-- fixed-top | sticky-top | fixed-bottom -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container ">
-            <a class="navbar-brand " href="index.php"><i class="far fa-gem"></i>Jewellery</a>
+            <a class="navbar-brand " href="#"><i class="far fa-gem"></i>Jewellery</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,28 +29,35 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog</a>
                     </li>
+                    <?php if ($_SESSION['loggedin'] == true): ?>
+                      <?php if ($_SESSION['user_role'] == 1): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="create.php">Create product</a>
+                        </li>
+                      <?php endif; ?>
+                    <?php endif; ?>
                 </ul>
                 <ul class="navbar-nav float-right">
-                <?php if (!$_SESSION['loggedin']): ?>
-                  <li class="nav-item">
-                      <a class="nav-link" href="login.php">Log in</a>
-                  </li>
-                <?php else: ?>
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.php"><?php echo $_SESSION['user_name']; ?></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="logout.php">Log out</a>
-                  </li>
-                <?php endif; ?>
-                <li class="nav_item">
-                  <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i></a>
-                </li>
+                  <?php if (!$_SESSION['loggedin']): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Log in</a>
+                    </li>
+                  <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php"><?php echo $_SESSION['user_name']; ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Log out</a>
+                    </li>
+                  <?php endif; ?>
+                    <li class="nav_item">
+                      <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>

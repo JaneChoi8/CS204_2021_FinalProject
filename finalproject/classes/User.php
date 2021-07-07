@@ -41,6 +41,7 @@ class User {
   public function login() {
     $_SESSION['user_id'] = $this->user['ID'];
     $_SESSION['user_name'] = $this->user['user_name'];
+    $_SESSION['user_role'] = $this->user['user_role'];
     $_SESSION['loggedin'] = true;
     header("Location: index.php?login=true");
   }

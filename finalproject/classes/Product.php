@@ -8,6 +8,7 @@
     public $product_name;
     public $product_price;
     public $product_company;
+    public $product_img;
     public $product_quantities;
     public $product = [];
     public $products = [];
@@ -53,17 +54,18 @@
       }
     }
 
-    public function createProducts($product_name, $product_price, $product_company, $product_quantities)
+    public function createProduct($product_name, $product_price, $product_company,$product_img, $product_quantities)
     {
       $this->product_name = $product_name;
       $this->product_price = $product_price;
       $this->product_company = $product_company;
       $this->product_quantities = $product_quantities;
+      $this->product_img = $product_img;
 
       if ($_SESSION['user_role'] == 1) {
-        $sql = "INSERT INTO products (product_name, product_price, product_company, quantities) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO products (product_name, product_price, product_company,product_img, quantities) VALUES (?,?,?,?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sisi", $this->product_name, $this->product_price, $this->product_company, $this->product_quantities);
+        $stmt->bind_param("sdssi", $this->product_name, $this->product_price, $this->product_company,$this->product_img, $this->product_quantities);
         $stmt->execute();
         if ($stmt->affected_rows == 1) {
           header("Location: product.php?id=".$stmt->insert_id."&create=true");

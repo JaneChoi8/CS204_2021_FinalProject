@@ -40,7 +40,7 @@
          <label for="email">Email</label>
          <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
          <p class="error error-email"></p>
-         <button type="submit" name="create" class="btn btn-block btn-success"><i class="fa fa-user"></i> Create Account</button>
+         <button type="submit" name="create" class="btn btn-block btn-success mt-3"><i class="fa fa-user"></i> Create Account</button>
        </form>
      </div>
      <div class="col-md-6">
@@ -52,9 +52,10 @@
          <label for="password">Password</label>
          <input type="password" name="password" class="form-control" placeholder="..." required>
          <p class="error error-password"></p>
-         <button type="submit" name="login" class="btn btn-block btn-success"><i class="fa fa-user"></i> Login</button>
+         <button type="submit" name="login" class="btn btn-block btn-success mt-3"><i class="fa fa-user"></i> Login</button>
        </form>
      </div>
    </div>
  </div>
+
  <?php include 'includes/footer.php'; ?>
