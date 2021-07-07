@@ -39,13 +39,13 @@ p{
     background-color: #81d8d0!important;
 }
 
-i nav {
-    color: black;
-}
 
-a .pre-footer {
-  color: black;
-}
+
 .fa-cart-plus:before{
   color: #00000080;
+}
+
+
+.fa-gem:before{
+  color: black;
 }
