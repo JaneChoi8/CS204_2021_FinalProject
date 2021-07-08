@@ -68,6 +68,17 @@ class User {
     else $this->errors['create_error'] = "Error, please try again!";;
   }
 
+  public function updateAccount($password, $email){
+    $this->user_hash = password_hash($password, PASSWORD_DEFAULT);
+    $this->user_email = $email;
+    $stmt = $this->conn->prepare("UPDATE users set user_hash = ?, user_email = ? where ID = ?");
+    $stmt->bind_param("ssi", $this->user_hash, $this->user_email, $this->user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if($stmt->affected_rows == 1) return true;
+    else $this->errors['update_error'] = "Error, please try again!";
+  }
+
   public static function logout() {
     $_SESSION = [];
     session_destroy();
