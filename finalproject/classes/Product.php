@@ -38,7 +38,7 @@
       $stmt = $this->conn->prepare($sql);
       $stmt->execute();
       $results = $stmt->get_result();
-      $this->products = $results->fetch_all(MTSQLI_ASSOC);
+      $this->products = $results->fetch_all(MYSQLI_ASSOC);
     }
 
     public function updateProductQ($id, $quantities)
@@ -63,7 +63,7 @@
       $this->product_img = $product_img;
 
       if ($_SESSION['user_role'] == 1) {
-        $sql = "INSERT INTO products (product_name, product_price, product_company,product_img, quantities) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO products (product_name, product_price, product_company, product_img, quantities) VALUES (?,?,?,?,?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("sdssi", $this->product_name, $this->product_price, $this->product_company,$this->product_img, $this->product_quantities);
         $stmt->execute();

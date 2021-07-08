@@ -1,5 +1,5 @@
 <?php
-  function FunctionName($file, $type, &$errors,$maxsize = 5000000)
+  function checkFile($file, $type, &$errors,$maxsize = 5000000)
   {
     $file = $file['image'];
     $fname = $file['name'];
@@ -18,7 +18,7 @@
       }
       if(empty($errors)) {
         $new_fname = uniqid('', false) . "." . end($ftype);
-        $final_path = "images2/" . $new_fname;
+        $final_path = "images/" . $new_fname;
         if(move_uploaded_file($tmp_name, $final_path)) {
           return $final_path;
         } else {
@@ -34,7 +34,7 @@
   function fileExt($type)
   {
     if ($type == "image") {
-      return ['png', 'jpeg', 'jpg', 'gif'];
+      return ['png', 'jpeg', 'jpg', 'gif', 'webp'];
     }else{
       return ['mp4', 'avi', 'mov'];
     }

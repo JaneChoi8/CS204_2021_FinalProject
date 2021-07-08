@@ -38,12 +38,12 @@
       <div class="col-md-6 text-center">
         <img src="images/m.watches.jpg" alt="" width="100%">
         <p class="lead">Watches for him</p>
-        <a href="#">Shop the collection</a>
+        <a href="product.php">Shop the collection</a>
       </div>
       <div class="col-md-6 text-center">
         <img src="images/w.watches.jpg" alt="" width="100%">
         <p class="lead">Watches for her</p>
-        <a href="#">Shop the collection</a>
+        <a href="product.php">Shop the collection</a>
       </div>
     </div>
   </div>
@@ -111,7 +111,9 @@
   <div class="container mb-3">
     <div class="row">
       <div class="col-md-3">
-        <p class="lead "> <i class="fas fa-truck-loading "></i> Delivery</p>
+        <p class="lead "> <i class="fas fa-truck-loading "></i> Delivery  <i class="fas fa-chevron-down" data-toggle="tooltip" data-html = "true" data-placement="bottom" title="Standard Delivery: 2 to 3 business days; complimentary with all orders
+        Express delivery: 1 to 2 business days; complimentary with all cartier.com orders over $500 ($35 below $500)"></i></p>
+
       </div>
       <div class="col-md-3">
         <p class="lead"><i class="fas fa-box-open "></i> Free return & Exchanges</p>

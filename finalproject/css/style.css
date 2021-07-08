@@ -39,13 +39,23 @@ p{
     background-color: #81d8d0!important;
 }
 
-
-
 .fa-cart-plus:before{
   color: #00000080;
 }
 
-
 .fa-gem:before{
   color: black;
+}
+
+.pre-footer a {
+  color: black !important;
+}
+
+.pre-footer a:hover {
+  color: black !important;
+}
+
+.container .product img {
+    width: 100%;
+    height: 30vh;
 }
