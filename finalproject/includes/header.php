@@ -37,7 +37,10 @@
                     <?php if ($_SESSION['loggedin'] == true): ?>
                       <?php if ($_SESSION['user_role'] == 1): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="create.php">Create product</a>
+                            <a class="nav-link" href="createpro.php">Create Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="createbl.php">Create Blog</a>
                         </li>
                       <?php endif; ?>
                     <?php endif; ?>
