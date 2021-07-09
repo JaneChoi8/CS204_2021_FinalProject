@@ -1,75 +1,74 @@
 <?php
-  /**
-   *
-   */
-  class Blog
-  {
-    public $blog_id;
-    public $blog_title;
-    public $blog_body;
-    public $blog_img;
-    public $blog_user_id;
-    public $blog = [];
-    public $blogs = [];
-    public $conn;
+  class Blog{
+    private $conn;
 
-    function __construct($conn)
-    {
+    public function __construct($conn){
       $this->conn = $conn;
     }
 
-    public function getBlog($id)
-    {
-      $this->blog_id = $id;
-      $sql = "SELECT * FROM blogs WHERE ID = ?";
-      $stmt = $this->conn->prepare($sql);
-      $stmt->bind_param("i", $this->blog_id);
-      $stmt->execute();
-      $results = $stmt->get_result();
-      if ($results->num_rows == 1) {
-        $this->product = $results->fetch_assoc();
-      }
-    }
-
-    public function getBlogs()
-    {
-      $sql = "SELECT * FROM blogs";
-      $stmt = $this->conn->prepare($sql);
-      $stmt->execute();
-      $results = $stmt->get_result();
-      if ($results->num_rows >= 1) {
-        $this->product = $results->fetch_all();
-      }
-    }
-
-    public function createBlog($blog_title, $blog_body, $blog_img)
-    {
-      $this->blog_title = $blog_title;
-      $this->blog_body = $blog_body;
-      $this->blog_img = $blog_img;
-      $sql = "INSERT INTO blogs (blog_title, blog_body, blog_img) VALUES (?,?,?)";
-      $stmt = $this->conn->prepare($sql);
-      $stmt->bind_param("sss", $this->blog_title, $this->blog_body, $this->blog_img);
+    public static function createBlog($conn, $title, $body, $img_path, $userID) {
+      $stmt = $conn->prepare("INSERT INTO blogs (blog_title, blog_body, blog_img, blog_user_id) VALUES (?, ?, ?, ?)");
+      $path = '';
+      if ($img_path != false) $path = $img_path;
+      $stmt->bind_param("sssi", $title, $body, $path, $userID);
       $stmt->execute();
       if ($stmt->affected_rows == 1) {
-        header("Location: blog.php?id=".$stmt->insert_id."&create=true");
+        $location = "Location: blog.php?id=" . $stmt->insert_id . "&created=true";
+        header($location);
       }
     }
 
-    public function deleteBlog($id)
-    {
-      $this->blog_id = $id;
+    public static function getBlog($conn, $id){
+      $stmt = $conn->prepare("SELECT * from blogs where ID = ?");
+      $stmt->bind_param("i", $id);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      if ($result->num_rows == 1) return $result->fetch_assoc();
+      elseif ($result->num_rows == 0) return false;
+    }
+
+    public static function getBlogs($conn, $limit) {
+      $stmt = $conn->prepare("SELECT * from blogs order by date_created desc limit ?");
+      $stmt->bind_param("i", $limit);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public static function deleteBlog($conn, $id){
       $sql = "DELETE FROM blogs WHERE ID = ?";
-      $stmt = $this->conn->prepare($sql);
-      $stmt->bind_param("i", $this->blog_id);
+      $stmt = $conn->prepare($sql);
+      $stmt->bind_param("i", $id);
       $stmt->execute();
-      if ($stmt->affected_rows == 1) {
+      if ($stmt->affected_rows == 1)
         header("Location: blog.php?delete");
-      }else {
+      else
         header("Location: blog.php?error");
-      }
     }
 
-  }
+    public static function outputBlogs($blogs) {
+      $output = '';
+      foreach ($blogs as $blog) {
+        $title = $blog['blog_title'];
+        $body = $blog['blog_body'];
+        $date = $blog['date_created'];
+        $id = $blog['ID'];
+        $output .=
+        '<div class="col-md-6">
+          <a href="blog.php?id='. $id .'"><h4 class="display-4 font-weight-bold">'. $title .'</h4></a>
+          <h5 class="display-5 font-weight-light">'. $date .'</h5>
+          <p>'. $body .'</p>
+        </div>';
+      }
+      return $output;
+    }
 
- ?>
+    public static function getBlogAuthor($conn, $id){
+      $stmt = $conn->prepare("SELECT * from users where ID = ?");
+      $stmt->bind_param("i", $id);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      if ($result->num_rows == 1) return $result->fetch_assoc()['user_name'];
+    }
+  }
+?>

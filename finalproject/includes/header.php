@@ -32,7 +32,10 @@
                         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="create.php">Create Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
                     </li>
                     <?php if ($_SESSION['loggedin'] == true): ?>
                       <?php if ($_SESSION['user_role'] == 1): ?>

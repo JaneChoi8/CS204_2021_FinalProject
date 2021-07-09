@@ -1,7 +1,6 @@
 <?php
-  function checkFile($file, $type, &$errors,$maxsize = 5000000)
-  {
-    $file = $file['image'];
+  function checkFile($file, $type, &$errors,$maxsize = 5000000){
+    $file = $file['img'];
     $fname = $file['name'];
     $ftype = explode("/", $file['type']);
     $tmp_name = $file['tmp_name'];
