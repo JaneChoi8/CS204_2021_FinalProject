@@ -1,7 +1,3 @@
-.pre-footer{
-  margin-top: 500px;
-}
-
 h2 {
   text-align: center;
 }
@@ -59,7 +55,31 @@ p{
   color: black !important;
 }
 
-.container .product img {
+.container.product .col-md-3 img {
     width: 100%;
     height: 30vh;
 }
+
+.container-fluid.item .col-md-7 img {
+    width: 100%;
+    height: 35rem;
+}
+
+.pre-footer{
+  margin-top: 500px;
+}
+
+a.btn.btn-lg.btn-primary.mx-auto {
+    width: 80%;
+}
+/*
+.modal-header img
+ {
+    width: 10%;
+    height: 5vh;
+}
+
+img.img-responsive {
+    width: 100%;
+    height: 70vh;
+} */
