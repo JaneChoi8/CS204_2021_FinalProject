@@ -1,5 +1,5 @@
 <?php
-  include 'includes/header.php';
+  include 'includes/config.php';
   include 'classes/User.php';
   if(isset($_POST['login'])) {
     $user_name = $_POST['username'];
@@ -17,6 +17,7 @@
     $user->checkNewUser($user_name, $user_password, $user_email);
     $errors = $user->errors;
   }
+  include 'includes/header.php';
 ?>
 
  <div class="container mt-5">

@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  if (!isset($_SESSION['loggedin'])) {
-    $_SESSION['loggedin'] = false;
-  }
-  include 'db.php';
- ?>
 <!doctype html>
 <html lang="en-us">
 <head>
@@ -14,6 +7,11 @@
   <title>Bright like a diamond</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -59,7 +57,7 @@
                     </li>
                   <?php endif; ?>
                     <li class="nav_item">
-                      <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i></a>
+                      <a class="nav-link" href="cart.php"><i class="fas fa-cart-plus"></i></a>
                     </li>
                 </ul>
             </div>

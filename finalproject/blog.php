@@ -1,5 +1,5 @@
 <?php
-  include 'includes/header.php';
+  include 'includes/config.php';
   include 'classes/Blog.php';
   include 'func/commentmanager.php';
 
@@ -7,6 +7,8 @@
     $blog = Blog::getBlog($conn, $_GET['id']);
     $blog_author = Blog::getBlogAuthor($conn, $blog['blog_user_id']);
   }
+
+  include 'includes/header.php';
 ?>
 <hr>
   <div class="container">

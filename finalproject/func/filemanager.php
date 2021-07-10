@@ -30,8 +30,7 @@
   }
 }
 
-  function fileExt($type)
-  {
+  function fileExt($type){
     if ($type == "image") {
       return ['png', 'jpeg', 'jpg', 'gif', 'webp'];
     }else{

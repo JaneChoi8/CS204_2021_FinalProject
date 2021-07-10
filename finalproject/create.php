@@ -1,5 +1,5 @@
 <?php
-  include 'includes/header.php';
+  include 'includes/config.php';
   include 'func/filemanager.php';
   include 'classes/Blog.php';
   $errors = [];
@@ -10,6 +10,7 @@
     if (empty($errors) && $img_path != '') Blog::createBlog($conn, $title, $body, $img_path, $_SESSION['user_id']);
     elseif ($_FILES['img']['error'] == 4) Blog::createBlog($conn, $title, $body, false, $_SESSION['user_id']);
   }
+  include 'includes/header.php';
 ?>
 <div class="container">
   <div class="row">

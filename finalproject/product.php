@@ -1,5 +1,5 @@
 <?php
-  include 'includes/header.php';
+  include 'includes/config.php';
   include 'classes/Product.php';
 
   $companys = ['swarovski', 'cartier', 'pandora', 'harrywinston', 'chopard', 'tiffany&co'];
@@ -8,6 +8,7 @@
     $product = new Product($conn);
     $product->deleteProduct($pro_id);
   }
+  include 'includes/header.php';
  ?>
 
   <div class="container mt-5">

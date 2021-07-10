@@ -1,5 +1,5 @@
 <?php
-  include 'includes/header.php';
+  include 'includes/config.php';
   include 'classes/Product.php';
   include 'func/filemanager.php';
 
@@ -15,6 +15,7 @@
       $product->createProduct($pro_name, $price, $company, $img_path, $quantities);
     }
   }
+  include 'includes/header.php';
  ?>
 
  <div class="container mt-5">
