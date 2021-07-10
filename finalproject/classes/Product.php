@@ -23,7 +23,7 @@
     {
       $this->product_id = $id;
       $sql = "SELECT * FROM products WHERE ID = ?";
-      $stmt = $this->conn->prepare();
+      $stmt = $this->conn->prepare($sql);
       $stmt->bind_param("i", $this->product_id);
       $stmt->execute();
       $results = $stmt->get_result();
@@ -36,6 +36,17 @@
     {
       $sql = "SELECT * FROM products";
       $stmt = $this->conn->prepare($sql);
+      $stmt->execute();
+      $results = $stmt->get_result();
+      $this->products = $results->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getProductsCom($product_company)
+    {
+      $this->product_company = $product_company;
+      $sql = "SELECT * FROM products WHERE LOWER(product_company) = ?";
+      $stmt = $this->conn->prepare($sql);
+      $stmt->bind_param("s", $this->product_company);
       $stmt->execute();
       $results = $stmt->get_result();
       $this->products = $results->fetch_all(MYSQLI_ASSOC);
@@ -73,17 +84,15 @@
       }
     }
 
-    public function deleteProducts($id)
+    public function deleteProduct($id)
     {
       $this->product_id = $id;
-      if ($_SESSION['user_role'] == 1) {
-        $sql = "DELETE FROM products WHERE ID = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("i", $this->product_id);
-        $stmt->execute();
-        if ($stmt->affected_rows == 1) {
-          header("Location: product.php?delete");
-        }
+      $sql = "DELETE FROM products WHERE ID = ?";
+      $stmt = $this->conn->prepare($sql);
+      $stmt->bind_param("i", $this->product_id);
+      $stmt->execute();
+      if ($stmt->affected_rows == 1) {
+        header("Location: product.php?delete");
       }
     }
   }

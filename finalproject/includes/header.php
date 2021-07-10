@@ -21,7 +21,7 @@
     <!-- fixed-top | sticky-top | fixed-bottom -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container ">
-            <a class="navbar-brand " href="#"><i class="far fa-gem"></i>Jewellery</a>
+            <a class="navbar-brand " href="index.php"><i class="far fa-gem"></i>Jewellery</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,18 +32,15 @@
                         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="create.php">Create Blog</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="blog.php">Blog</a>
                     </li>
                     <?php if ($_SESSION['loggedin'] == true): ?>
+                      <li class="nav-item">
+                          <a class="nav-link" href="createbl.php">Create Blog</a>
+                      </li>
                       <?php if ($_SESSION['user_role'] == 1): ?>
                         <li class="nav-item">
                             <a class="nav-link" href="createpro.php">Create Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="createbl.php">Create Blog</a>
                         </li>
                       <?php endif; ?>
                     <?php endif; ?>

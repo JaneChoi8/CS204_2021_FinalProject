@@ -52,14 +52,14 @@
 
   </div>
 
-  <h2>Our collaborate brands </h2>
+  <h2 class="mt-5">Our collaborate brands </h2>
   <div class="container mb-3">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md-4">
-              <a href="product.php?#pnj"><img src="images/pnj.png" alt=""></a>
+              <a href="product.php?#pandora"><img src="images/pandora.jpg" alt=""></a>
             </div>
             <div class="col-md-4">
               <a href="product.php?#cartier"><img src="images/cartier.png" alt=""></a>
@@ -75,23 +75,10 @@
               <a href="product.php?#chopard"><img src="images/chopard.png" alt=""></a>
             </div>
             <div class="col-md-4">
-              <a href="product.php?#bvlgari"><img src="images/bvlgari.jpg" alt=""></a>
-            </div>
-            <div class="col-md-4">
-              <a href="product.php?#swarovski"><img src="images/swarovski.png" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
               <a href="product.php?#tiffany&co"><img src="images/tiffany&co.png" alt=""></a>
             </div>
             <div class="col-md-4">
-              <a href="product.php?#ancleefarpels"><img src="images/vancleefarpels.png" alt=""></a>
-            </div>
-            <div class="col-md-4">
-              <a href="product.php?#pandora"><img src="images/pandora.jpg" alt=""></a>
+              <a href="product.php?#swarovski"><img src="images/swarovski.png" alt=""></a>
             </div>
           </div>
         </div>
@@ -107,7 +94,7 @@
     </div>
   </div>
 
-  <h2>OUR EXCLUSIVE E-BOUTIQUE SERVICES</h2>
+  <h2 class="mt-5">OUR EXCLUSIVE E-BOUTIQUE SERVICES</h2>
   <div class="container mb-3">
     <div class="row">
       <div class="col-md-3">

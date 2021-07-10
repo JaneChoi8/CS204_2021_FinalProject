@@ -30,8 +30,8 @@
          <input type="text" class="form-control" name="company">
          <label for="quantities">Product quantities</label>
          <input type="number" class="form-control" name="quantities">
-         <label for="image">Product image</label>
-         <input type="file" name="image" class="form-control mt-1 mb-1" value="">
+         <label for="img">Product image</label>
+         <input type="file" name="img" class="form-control mt-1 mb-1" value="">
          <button type="submit" class="btn btn-outline-primary mt-3 mb-3" name="create" >Create </button>
        </form>
      </div>
