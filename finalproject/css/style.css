@@ -76,3 +76,7 @@ a.btn.btn-lg.btn-primary.mx-auto {
 button.btn.btn-block.btn-success.mt-3 {
     background: black !important;
 }
+
+ul li {
+    list-style-type: none;
+}
