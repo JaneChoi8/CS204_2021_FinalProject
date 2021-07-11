@@ -34,7 +34,7 @@
                     </li>
                     <?php if ($_SESSION['loggedin'] == true): ?>
                       <li class="nav-item">
-                          <a class="nav-link" href="createbl.php">Create Blog</a>
+                          <a class="nav-link" href="create.php">Create Blog</a>
                       </li>
                       <?php if ($_SESSION['user_role'] == 1): ?>
                         <li class="nav-item">
